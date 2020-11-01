@@ -8,7 +8,10 @@ const sourcemaps = require("gulp-sourcemaps");
 const uglify = require("gulp-uglify-es").default;
 
 function styles() {
-  return gulp.src("./assets/scss/**/*.scss")
+  return gulp.src([
+      "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+      "./assets/scss/**/*.scss"
+  ])
   .pipe(sourcemaps.init())
   .pipe(sass())
   .pipe(concat("styles.css"))
@@ -22,7 +25,8 @@ function styles() {
 function scripts() {
   return gulp.src([
     "node_modules/jquery/dist/jquery.min.js",
-    "./assets/js/common.js"])
+    "./assets/js/common.js"
+  ])
   .pipe(sourcemaps.init())
   .pipe(concat("scripts.min.js"))
   .pipe(uglify())
