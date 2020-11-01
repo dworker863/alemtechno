@@ -1,0 +1,14 @@
+@mixin fonts($name, $style, $weight, $url-woff, $url-woff2) {
+  @font-face {
+    font-family: $name;
+    font-style: $style;
+    font-weight: $weight;
+    src: url($url-woff) format("woff"), url($url-woff2) format("woff2");
+  }
+}
+
+@include fonts("Open Sans", normal, 400, "../fonts/GilroyRegular/GilroyRegular.woff", "../fonts/GilroyRegular/GilroyRegular.woff2");
+@include fonts("Open Sans", normal, 600, "../fonts/GilroySemiBold/GilroySemiBold.woff", "../fonts/GilroySemiBold/GilroySemiBold.woff2");
+@include fonts("Open Sans", normal, 700, "../fonts/GilroyBold/GilroyBold.woff", "../fonts/GilroyBold/GilroyBold.woff2");
+@include fonts("Open Sans", normal, 800, "../fonts/GilroyExtraBold/GilroyExtraBold.woff", "../fonts/GilroyExtraBold/GilroyExtraBold.woff2");
+@include fonts("Open Sans", normal, 900, "../fonts/GilroyBlack/GilroyBlack.woff", "../fonts/GilroyLight/GilroyBlack.woff2");
