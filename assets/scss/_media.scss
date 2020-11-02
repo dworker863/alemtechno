@@ -1,4 +1,8 @@
 @media (min-width: 768px) {
+  header {
+    background-image: url(../images/header_bg.png);
+    background-size: cover;
+  }
 
   .navbar-collapse {
     position: static;
