@@ -14,7 +14,7 @@ header {
 }
 
 .layer-overlay {
-
+  display: flex;
   height: 100vh;
   background: linear-gradient(156.33deg, rgba(73, 88, 119, 0.5) 16.34%, rgba(16, 31, 63, 0.5) 85.9%);
   box-shadow: 0px 10px 15px rgba(75, 86, 110, 0.03), 0px 7px 25px rgba(75, 86, 110, 0.03), 0px 5px 25px rgba(75, 86, 110, 0.07);
@@ -178,8 +178,11 @@ header {
 }
 
 .header-text {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-self: center;
   padding: 0 40px;
-  margin-top: 330px;
   text-align: center;
 
   h1 {
@@ -194,12 +197,19 @@ header {
 
 .aboutus {
   padding-top: 34px;
+}
 
-  h2 {
-    color: #4B566E;
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 60px;
+.aboutus-title {
+  color: #4B566E;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.aboutus-text {
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
   }
 }
 
@@ -232,6 +242,7 @@ header {
 }
 
 .card-body {
+  padding-right: 55px;
   padding-left: 0;
 }
 
