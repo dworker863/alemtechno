@@ -111,6 +111,13 @@
       }
     }
   }
+
+  .ourprojects {
+    .triangle_horizontal {
+      top: 65%;
+      left: -25px;
+    }
+  }
 }
 
 @media (min-width: 1600px) {
@@ -125,6 +132,12 @@
       .card {
         top: 27%;
       }
+    }
+  }
+
+  .ourprojects {
+    .triangle_horizontal {
+      top: 80%;
     }
   }
 
