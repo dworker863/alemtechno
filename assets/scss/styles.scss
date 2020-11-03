@@ -2,17 +2,19 @@
 @import "fonts";
 
 body {
-  color: #ffffff;
+  font-family: Gilroy;
+  font-size: 16px;
 }
 
 header {
+  color: #ffffff;
   height: 100vh;
   background: linear-gradient(156.33deg, #495877 16.34%, #101F3F 85.9%);
   box-shadow: 0px 10px 15px rgba(75, 86, 110, 0.09), 0px 7px 25px rgba(75, 86, 110, 0.11), 0px 5px 25px rgba(75, 86, 110, 0.15);
 }
 
 .layer-overlay {
-  
+
   height: 100vh;
   background: linear-gradient(156.33deg, rgba(73, 88, 119, 0.5) 16.34%, rgba(16, 31, 63, 0.5) 85.9%);
   box-shadow: 0px 10px 15px rgba(75, 86, 110, 0.03), 0px 7px 25px rgba(75, 86, 110, 0.03), 0px 5px 25px rgba(75, 86, 110, 0.07);
@@ -39,12 +41,10 @@ header {
   left: 0;
   width: 100%;
   padding-top: 50px;
-  padding-bottom: 10px;
+  padding-bottom: 14px;
   font-size: 18px;
-  font-weight: 600;
   background: linear-gradient(149.93deg, #101F3F -13.43%, #495877 136.82%);
   box-shadow: 0px 10px 15px rgba(75, 86, 110, 0.09), 0px 7px 25px rgba(75, 86, 110, 0.11), 0px 5px 25px rgba(75, 86, 110, 0.15);
-  //z-index: -1;
 }
 
 
@@ -64,6 +64,7 @@ header {
 
 .navbar-nav-lang {
   margin: 0;
+  margin-top: 9px;
   padding: 0;
   padding-left: 7%;
   list-style: none;
@@ -177,13 +178,69 @@ header {
 }
 
 .header-text {
-  margin-top: 320px;
+  padding: 0 40px;
+  margin-top: 330px;
   text-align: center;
 
   h1 {
     font-size: 30px;
     font-weight: 900;
   }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+.aboutus {
+  padding-top: 34px;
+
+  h2 {
+    color: #4B566E;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 60px;
+  }
+}
+
+.aboutus-question {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card {
+  position: relative;
+  border: none;
+  margin-bottom: 79px;
+
+  .number {
+    position: absolute;
+    top: -54px;
+    right: 10px;
+    color: rgba(75, 86, 110, 0.1);
+    font-size: 150px;
+    font-weight: 300;
+  }
+}
+
+.card-title {
+  padding-right: 55px;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card-body {
+  padding-left: 0;
+}
+
+.card-image-bottom {
+  width: 100%;
+  filter: drop-shadow(0px 10px 15px rgba(75, 86, 110, 0.06));
+  filter: drop-shadow(0px 7px 25px rgba(75, 86, 110, 0.06));
+  filter: drop-shadow(0px 5px 25px rgba(75, 86, 110, 0.1));;
+  border-radius: 12px;
 }
 
 @import "media";

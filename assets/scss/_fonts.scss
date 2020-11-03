@@ -7,8 +7,9 @@
   }
 }
 
-@include fonts("Open Sans", normal, 400, "../fonts/GilroyRegular/GilroyRegular.woff", "../fonts/GilroyRegular/GilroyRegular.woff2");
-@include fonts("Open Sans", normal, 600, "../fonts/GilroySemiBold/GilroySemiBold.woff", "../fonts/GilroySemiBold/GilroySemiBold.woff2");
-@include fonts("Open Sans", normal, 700, "../fonts/GilroyBold/GilroyBold.woff", "../fonts/GilroyBold/GilroyBold.woff2");
-@include fonts("Open Sans", normal, 800, "../fonts/GilroyExtraBold/GilroyExtraBold.woff", "../fonts/GilroyExtraBold/GilroyExtraBold.woff2");
-@include fonts("Open Sans", normal, 900, "../fonts/GilroyBlack/GilroyBlack.woff", "../fonts/GilroyLight/GilroyBlack.woff2");
+@include fonts("Gilroy", normal, 300, "../fonts/GilroyLight/GilroyLight.woff", "../fonts/GilroyLight/GilroyLight.woff2");
+@include fonts("Gilroy", normal, 400, "../fonts/GilroyRegular/GilroyRegular.woff", "../fonts/GilroyRegular/GilroyRegular.woff2");
+@include fonts("Gilroy", normal, 600, "../fonts/GilroySemiBold/GilroySemiBold.woff", "../fonts/GilroySemiBold/GilroySemiBold.woff2");
+@include fonts("Gilroy", normal, 700, "../fonts/GilroyBold/GilroyBold.woff", "../fonts/GilroyBold/GilroyBold.woff2");
+@include fonts("Gilroy", normal, 800, "../fonts/GilroyExtraBold/GilroyExtraBold.woff", "../fonts/GilroyExtraBold/GilroyExtraBold.woff2");
+@include fonts("Gilroy", normal, 900, "../fonts/GilroyBlack/GilroyBlack.woff", "../fonts/GilroyLight/GilroyBlack.woff2");
