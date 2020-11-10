@@ -257,11 +257,17 @@ header {
 }
 
 .ourprojects {
+  margin-bottom: 85px;
+
   .ourprojects-text {
     color: #4B566E;
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 60px;
+  }
+
+  .ourprojects-info {
+    font-size: 20px;
   }
 
   .col-md-8 {
@@ -338,6 +344,25 @@ header {
     border-radius: 6px;
     margin-bottom: 32px;
   }
+}
+
+.partners {
+  .owl-carousel {
+    box-shadow: 0px 10px 29px rgba(75, 86, 110, 0.03), 0px 7px 55px rgba(75, 86, 110, 0.03), 1px 5px 38px rgba(75, 86, 110, 0.07);
+    border-radius: 6px;
+  }
+
+  .mycarousel-item {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 251px;
+    height: 251px;    
+
+    img {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }  
 }
 
 @import "media";

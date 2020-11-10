@@ -19,5 +19,8 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify-es": "^2.0.0",
     "jquery": "^3.5.1"
+  },
+  "dependencies": {
+    "owl.carousel": "^2.3.4"
   }
 }

@@ -99,6 +99,10 @@
   }
 
   .ourprojects {
+    .card-title {
+      font-size: 30px;
+    }
+
     .card-body {
       position: static;
     }
@@ -137,6 +141,13 @@
       .card {
         top: 27%;
       }
+    }
+  }
+
+  .ourprojects {
+    .card-title {
+      font-size: 30px;
+      font-weight: 700;
     }
   }
 }

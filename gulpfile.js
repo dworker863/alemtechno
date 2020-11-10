@@ -9,31 +9,33 @@ const uglify = require("gulp-uglify-es").default;
 
 function styles() {
   return gulp.src([
-      "node_modules/bootstrap/dist/css/bootstrap.min.css",
-      "./assets/scss/**/*.scss"
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
+    "./assets/scss/**/*.scss"
   ])
-  .pipe(sourcemaps.init())
-  .pipe(sass())
-  .pipe(concat("styles.css"))
-  .pipe(autoprefixer())
-  .pipe(cleanCSS({ level: 2 }))
-  .pipe(sourcemaps.write())
-  .pipe(gulp.dest("assets/css"))
-  .pipe(browserSync.stream())
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(concat("styles.css"))
+    .pipe(autoprefixer())
+    .pipe(cleanCSS({ level: 2 }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("assets/css"))
+    .pipe(browserSync.stream())
 }
 
 function scripts() {
   return gulp.src([
     "node_modules/jquery/dist/jquery.slim.min.js",
     "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+    "node_modules/owl.carousel/dist/owl.carousel.min.js",
     "./assets/js/common.js"
   ])
-  .pipe(sourcemaps.init())
-  .pipe(concat("scripts.min.js"))
-  .pipe(uglify())
-  .pipe(sourcemaps.write())
-  .pipe(gulp.dest("assets/js"))
-  .pipe(browserSync.stream())
+    .pipe(sourcemaps.init())
+    .pipe(concat("scripts.min.js"))
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("assets/js"))
+    .pipe(browserSync.stream())
 }
 
 function watch() {
