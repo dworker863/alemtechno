@@ -92,6 +92,10 @@
   }
 
   .contactus {
+    .contacts {
+      padding-left: 80px;
+    }
+
     .contactus-form {
       padding-right: 50px;
       padding-left: 50px;
@@ -100,6 +104,11 @@
         top: 30%;
       }
     }
+  }
+
+  footer {
+    padding-right: 20px;
+    padding-left: 50px; 
   }
   
 }
@@ -131,6 +140,22 @@
       position: static;
     }
   }
+
+  .contactus {
+    .contacts {
+      padding-left: 80px;
+    }
+
+    .contactus-form {
+      padding-right: 80px;
+      padding-left: 80px;
+    }
+  }
+
+  footer {
+    padding-right: 50px;
+    padding-left: 50px; 
+  }
 }
 
 @media (min-width: 1400px) {
@@ -150,6 +175,22 @@
         top: 25%;
       }
     }
+  }
+
+  .contactus {
+    .contacts {
+      padding-left: 110px;
+    }
+
+    .contactus-form {
+      padding-right: 110px;
+      padding-left: 110px;
+    }
+  }
+
+  footer {
+    padding-right: 80px;
+    padding-left: 80px; 
   }
 }
 
