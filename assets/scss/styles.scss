@@ -3,6 +3,7 @@
 @import "libs";
 
 body {
+  position: relative;
   font-family: Gilroy;
   font-size: 16px;
 }
@@ -371,10 +372,28 @@ header {
 }
 
 .contactus {
-
   .col-12, .col-md-5, .col-md-7 {
     padding: 0;
   }
+
+  .contacts {
+    color: #3B404A;
+    padding: 30px;
+    padding-top: 123px;
+    
+    .contacts-text {
+      color: #000;
+      font-size: 24px;
+      font-weight: 700;      
+    }
+
+    .fas, .far {
+      margin-right: 10px;
+      font-family: "Font Awesome 5 Free";      
+      font-size: 30px;
+    }
+  }
+
   .contactus-form {
     padding: 30px;
     padding-top: 123px;
@@ -425,18 +444,31 @@ header {
     margin-bottom: 55px;
 
     &:last-child {
-      margin-bottom: 74px;
+      margin-bottom: 170px;
     }
   }
+}
 
-  .copyrights {
-    color: #A5B2CE;
-    font-size: 14px;
+footer {  
+  position: absolute;
+  bottom: 0px;
+  color: #A5B2CE;
+  padding: 30px 0;
+  background-color: transparent;
+  z-index: 5;
 
-    p {
-      line-height: 10px;
-      text-align: center;
-    }
+  .col-12 {
+    text-align: center;
+  }
+
+  .col-md-6 {
+    padding-left: 40px;
+    text-align: left;
+  }
+
+  .col-md-3 {
+    padding-right: 30px;
+    text-align: right;
   }
 }
 
