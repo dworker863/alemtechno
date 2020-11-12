@@ -55,6 +55,18 @@
       margin-bottom: 12px;
     }
   }
+
+  footer {
+  .col-md-6 {
+    padding-left: 40px;
+    text-align: left;
+  }
+
+  .col-md-3 {
+    padding-right: 30px;
+    text-align: right;
+  }
+  }
 }
 
 @media (min-width: 992px) {
@@ -78,6 +90,18 @@
       }
     }
   }
+
+  .contactus {
+    .contactus-form {
+      padding-right: 50px;
+      padding-left: 50px;
+
+      .triangle__horizontal {
+        top: 30%;
+      }
+    }
+  }
+  
 }
 
 @media (min-width: 1200px) {

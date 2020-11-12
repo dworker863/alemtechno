@@ -395,9 +395,27 @@ header {
   }
 
   .contactus-form {
+    position: relative;
     padding: 30px;
     padding-top: 123px;
     background: linear-gradient(315.53deg, #0F1E3E 21.35%, rgba(25, 47, 98, 0.6) 131.99%);
+
+    .triangle__horizontal {
+      position: absolute;
+      top: 20%;
+      left: -28px;
+      width: 0;
+      height: 0;    
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 30px solid #4E5C7B;
+      transform: translate(0, -50%);
+    }
+
+    .col-lg-6 {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
   }
 
   .form-text {
@@ -459,16 +477,6 @@ footer {
 
   .col-12 {
     text-align: center;
-  }
-
-  .col-md-6 {
-    padding-left: 40px;
-    text-align: left;
-  }
-
-  .col-md-3 {
-    padding-right: 30px;
-    text-align: right;
   }
 }
 
