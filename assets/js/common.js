@@ -28,4 +28,22 @@ $(document).ready(function () {
       }
     }
   })
+
+  $("form").submit(function (event) { //Change
+    event.preventDefault();
+    $('.form-control').addClass('required');
+    var th = $(this);
+    console.log(th.serialize());
+    $.ajax({
+      type: "POST",
+      url: "../mail.php", //Change
+      data: th.serialize()
+    }).done(function () {
+      setTimeout(function () {
+        // Done Functions
+        th.trigger("reset");
+      }, 1000);
+    });
+    return false;
+  });
 });

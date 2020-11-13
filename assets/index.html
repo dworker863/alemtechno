@@ -7,7 +7,7 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/styles.css">
-  <title>Document</title>
+  <title>Alem Techo</title>
 </head>
 
 <body>
@@ -301,25 +301,28 @@
           <div class="contactus-form">
             <div class="triangle__horizontal d-none d-md-block"></div>
             <h3 class="form-text">Свяжитесь с нами!</h3>
-            <form>
+            <form method="#" novalidate>
+              <input type="hidden" name="project_name" value="Alem Techo">
+              <input type="hidden" name="admin_email" value="dworker863@gmail.com">
+              <input type="hidden" name="form_subject" value="Test">
               <div class="form-row justify-content-lg-between">
                 <div class="col-12 col-lg-6">
-                  <input type="text" class="form-control" placeholder="*Полное имя">
+                  <input type="text" name="fullname" class="form-control" placeholder="*Полное имя" required>
                 </div>
                 <div class="col-12 col-lg-6">
-                  <input type="tel" class="form-control" placeholder="*Телефон">
+                  <input type="tel" name="phone" class="form-control" placeholder="*Телефон" required>
                 </div>
               </div>
               <div class="form-row justify-content-lg-between">
                 <div class="col-12 col-lg-6">
-                  <input type="text" class="form-control" placeholder="*Компания">
+                  <input type="text" name="company" class="form-control" placeholder="*Компания">
                 </div>
                 <div class="col-12 col-lg-6">
-                  <input type="email" class="form-control" placeholder="*Почта">
+                  <input type="email" name="email" class="form-control" placeholder="*Почта" required>
                 </div>
               </div>
               <div class="col-12">
-                <textarea name="message" class="form-control" placeholder="*Сообщение" rows="4"></textarea>
+                <textarea name="message" class="form-control" placeholder="*Сообщение" rows="4" required></textarea>
               </div>
               <button type="submit" class="btn btn-send w-100">Отправить</button>
             </form>

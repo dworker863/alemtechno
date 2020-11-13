@@ -428,7 +428,15 @@ header {
   }
 
   .form-control {
-    margin-bottom: 25px;
+    margin-bottom: 25px; 
+  }
+
+  .form-control.required:invalid {          
+    background-color: #FFB8B8;
+
+    &::placeholder {
+      color: #E35D5D;
+    }
   }
 
   .btn-send {
