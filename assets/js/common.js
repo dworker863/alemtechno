@@ -29,19 +29,57 @@ $(document).ready(function () {
     }
   })
 
-  $("form").submit(function (event) { //Change
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 850) {
+      $('.navbar').addClass('fixed');
+      $('.navbar-brand .logo-light').addClass('d-none');
+      $('.navbar-brand .logo-dark').removeClass('d-none');
+    } else {
+      $('.navbar').removeClass('fixed');
+      $('.navbar-brand .logo-light').removeClass('d-none');
+      $('.navbar-brand .logo-dark').addClass('d-none');
+    }
+
+    if ($(window).scrollTop() === $(document).height() - $(window).height()) {
+      $('.nav-item.active').removeClass('active');
+      $('.nav-item:nth-child(5)').addClass('active');
+    }
+    else if ($(window).scrollTop() >= $('.partners').offset().top - 50) {
+      $('.nav-item.active').removeClass('active');
+      $('.nav-item:nth-child(4)').addClass('active');
+    }
+    else if ($(window).scrollTop() >= $('.ourprojects').offset().top - 50) {
+      $('.nav-item.active').removeClass('active');
+      $('.nav-item:nth-child(3)').addClass('active');
+    }
+    else if ($(window).scrollTop() >= $('.aboutus').offset().top - 50) {
+      $('.nav-item.active').removeClass('active');
+      $('.nav-item:nth-child(2)').addClass('active');
+    }
+    else {
+      $('.nav-item.active').removeClass('active');
+      $('.nav-item:nth-child(1)').addClass('active');
+    }
+  });
+
+  $('.nav-item').click(function () {
+    $('.nav-item.active').removeClass('active');
+    $(this).addClass('active');
+  })
+
+  $('form').submit(function (event) { //Change
     event.preventDefault();
     $('.form-control').addClass('required');
     var th = $(this);
     console.log(th.serialize());
     $.ajax({
-      type: "POST",
-      url: "../mail.php", //Change
+      type: 'POST',
+      url: '../mail.php', //Change
       data: th.serialize()
     }).done(function () {
       setTimeout(function () {
         // Done Functions
-        th.trigger("reset");
+        th.trigger('reset');
       }, 1000);
     });
     return false;

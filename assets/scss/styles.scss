@@ -23,6 +23,12 @@ header {
   border-radius: 6px;
 }
 
+.navbar.fixed {
+  .navbar-nav .nav-link {
+    color: #4B566E;
+  }
+}
+
 .navbar-brand {
   z-index: 1;
 
