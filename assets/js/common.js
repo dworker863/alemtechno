@@ -5,7 +5,7 @@ $(document).ready(function () {
 
   $('.btn-show').click(function () {
     $('.row-show').toggleClass('d-none');
-  })
+  });
 
   $('.owl-carousel').owlCarousel({
     loop: true,
@@ -14,20 +14,20 @@ $(document).ready(function () {
     responsiveClass: true,
     responsive: {
       0: {
-        items: 1
+        items: 1,
       },
       900: {
-        items: 2
+        items: 2,
       },
       1200: {
-        items: 3
+        items: 3,
       },
       1400: {
         items: 4,
-        loop: false
-      }
-    }
-  })
+        loop: false,
+      },
+    },
+  });
 
   $(window).scroll(function () {
     if ($(window).scrollTop() > 850) {
@@ -43,20 +43,16 @@ $(document).ready(function () {
     if ($(window).scrollTop() === $(document).height() - $(window).height()) {
       $('.nav-item.active').removeClass('active');
       $('.nav-item:nth-child(5)').addClass('active');
-    }
-    else if ($(window).scrollTop() >= $('.partners').offset().top - 50) {
+    } else if ($(window).scrollTop() >= $('.partners').offset().top - 50) {
       $('.nav-item.active').removeClass('active');
       $('.nav-item:nth-child(4)').addClass('active');
-    }
-    else if ($(window).scrollTop() >= $('.ourprojects').offset().top - 50) {
+    } else if ($(window).scrollTop() >= $('.ourprojects').offset().top - 50) {
       $('.nav-item.active').removeClass('active');
       $('.nav-item:nth-child(3)').addClass('active');
-    }
-    else if ($(window).scrollTop() >= $('.aboutus').offset().top - 50) {
+    } else if ($(window).scrollTop() >= $('.aboutus').offset().top - 50) {
       $('.nav-item.active').removeClass('active');
       $('.nav-item:nth-child(2)').addClass('active');
-    }
-    else {
+    } else {
       $('.nav-item.active').removeClass('active');
       $('.nav-item:nth-child(1)').addClass('active');
     }
@@ -65,9 +61,10 @@ $(document).ready(function () {
   $('.nav-item').click(function () {
     $('.nav-item.active').removeClass('active');
     $(this).addClass('active');
-  })
+  });
 
-  $('form').submit(function (event) { //Change
+  $('form').submit(function (event) {
+    //Change
     event.preventDefault();
     $('.form-control').addClass('required');
     var th = $(this);
@@ -75,7 +72,7 @@ $(document).ready(function () {
     $.ajax({
       type: 'POST',
       url: '../mail.php', //Change
-      data: th.serialize()
+      data: th.serialize(),
     }).done(function () {
       setTimeout(function () {
         // Done Functions
