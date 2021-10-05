@@ -2,10 +2,23 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
+const htmlmin = require('gulp-htmlmin');
+const del = require('del');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify-es').default;
+
+function html() {
+  return gulp
+    .src('assets/*.html')
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true,
+      }),
+    )
+    .pipe(gulp.dest('dist'));
+}
 
 function styles() {
   return gulp
@@ -52,9 +65,11 @@ function watch() {
   gulp.watch('assets/js/common.js', gulp.series(scripts));
 }
 
-function build(done) {
-  gulp.src(['assets/*.html', 'assets/*.php']).pipe(gulp.dest('dist'));
+function clear() {
+  return del('dist');
+}
 
+function build(done) {
   gulp.src('assets/css/styles.css').pipe(gulp.dest('dist/css'));
 
   gulp.src('assets/js/scripts.min.js').pipe(gulp.dest('dist/js'));
@@ -67,4 +82,4 @@ function build(done) {
 }
 
 exports.default = gulp.series(gulp.parallel(styles, scripts), watch);
-exports.build = gulp.series(gulp.parallel(styles, scripts), build);
+exports.build = gulp.series(gulp.parallel(styles, scripts), clear, html, build);
