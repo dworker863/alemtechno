@@ -31,7 +31,6 @@ $(document).ready(function () {
 
   $(window).scroll(function () {
     if ($(window).scrollTop() > 850) {
-      $('.navbar').addClass('fixed');
       $('.navbar-brand .logo-light').addClass('d-none');
       $('.navbar-brand .logo-dark').removeClass('d-none');
     } else {
